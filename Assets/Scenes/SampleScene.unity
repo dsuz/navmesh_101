@@ -1307,6 +1307,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_surfaceOffcet: 0.05
   m_target: {fileID: 2023241788}
+  m_mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!4 &427526183
 Transform:
   m_ObjectHideFlags: 0
@@ -2668,7 +2671,7 @@ GameObject:
   - component: {fileID: 701893581}
   - component: {fileID: 701893580}
   - component: {fileID: 701893579}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

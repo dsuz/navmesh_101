@@ -13,9 +13,11 @@ public class TargetPickerController : MonoBehaviour
     /// <summary>Target となるオブジェクト</summary>
     [SerializeField] GameObject m_target;
 
+    /// <summary>レイヤーマスクの設定（追加）</summary>
+    [SerializeField] LayerMask m_mask;
+
     void Start()
     {
-
     }
 
     void Update()
@@ -28,7 +30,8 @@ public class TargetPickerController : MonoBehaviour
         RaycastHit hit;
 
         // Ray を発射して当たったかどうか調べる
-        bool isHit = Physics.Raycast(ray, out hit, Camera.main.farClipPlane);
+        // bool isHit = Physics.Raycast(ray, out hit, Camera.main.farClipPlane);
+        bool isHit = Physics.Raycast(ray, out hit, Camera.main.farClipPlane, m_mask);   // マスクする（追加）
         // Ray が当たっていたらその場所に Target を移動する
         if (isHit)
         {
